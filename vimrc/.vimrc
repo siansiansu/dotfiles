@@ -76,7 +76,7 @@ set noswapfile                        " Do not use a swapfile for the buffer
 set background=dark                   " Dark background
 set t_Co=256                          " 256 color mode
 set termguicolors                     " Use true color in the terminal
-color spacemacs-theme                         " Colorschemes
+colorscheme one                       " Colorschemes
 
 """ 1.4 Editing
 set backspace=eol,start,indent        " Controlling What the Backspace Key Does

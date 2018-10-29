@@ -161,7 +161,7 @@ set t_vb=                             " No beep or flash
 """ 2.1 General config
 let pyindent_open_paren=0                           " fix the offical python indent
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
-let g:python3_host_prog = '/anaconda3/envs/bat/bin/python3'
+let g:python3_host_prog = '/Users/alexsu/.pyenv/shims/python3'
 
 
 "" 2.2 Autocmd

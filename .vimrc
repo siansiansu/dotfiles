@@ -104,14 +104,14 @@ filetype indent on                    " Enable filetype-specific indenting
 filetype plugin on                    " Enable filetype-specific plugins
 
 """ 1.7 Folding
-set foldnestmax=3                     " Sets the maximum nesting of folds
-set foldmethod=syntax                 " The kind of folding
-set foldenable                        " Code folding
-set foldcolumn=1                      " Add a bit extra margin to the left
+" set foldnestmax=3                     " Sets the maximum nesting of folds
+" set foldmethod=syntax                 " The kind of folding
+" set foldenable                        " Code folding
+" set foldcolumn=1                      " Add a bit extra margin to the left
 
 """ 1.8 Hightlight
 set cursorline                        " Highlight the screen line of the cursor
-set cursorcolumn
+" set cursorcolumn
 set showmatch                         " Cursor shows matching ) and }
 syntax on                             " Syntax highlight
 
@@ -197,22 +197,23 @@ noremap <silent> <Leader>h :split<CR>
 call plug#begin('~/.vim/plugged')
 
 """ 4.1 Autocomplete
-Plug 'zchee/deoplete-jedi'                                        " https://github.com/zchee/deoplete-jedi
+" Plug 'zchee/deoplete-jedi'                                        " https://github.com/zchee/deoplete-jedi
 
-if has('nvim')
-  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins'  }  " https://github.com/Shougo/deoplete.nvim
-else
-  Plug 'Shougo/deoplete.nvim'
-  Plug 'roxma/nvim-yarp'                                          " https://github.com/roxma/nvim-yarp
-  Plug 'roxma/vim-hug-neovim-rpc'                                 " https://github.com/roxma/vim-hug-neovim-rpc
-endif
+" if has('nvim')
+"  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins'  }  " https://github.com/Shougo/deoplete.nvim
+" else
+"  Plug 'Shougo/deoplete.nvim'
+"  Plug 'roxma/nvim-yarp'                                          " https://github.com/roxma/nvim-yarp
+"  Plug 'roxma/vim-hug-neovim-rpc'                                 " https://github.com/roxma/vim-hug-neovim-rpc
+" endif
+
 let g:deoplete#enable_at_startup = 1
 let b:deoplete_disable_auto_complete=1
 let g:deoplete_disable_auto_complete=1
 let g:deoplete#sources = {}
 
 """ 4.2 Displaying
-Plug 'Yggdroot/indentLine'                                        " https://github.com/Yggdroot/indentLine
+" Plug 'Yggdroot/indentLine'                                        " https://github.com/Yggdroot/indentLine
 let g:indentLine_color_term = 239
 let g:indentLine_char = '|'
 
@@ -223,17 +224,17 @@ Plug 'ap/vim-css-color'                                           " https://gith
 
 """ 4.3 Editing
 Plug 'tpope/vim-surround'                                         " https://github.com/tpope/vim-surround
-Plug 'easymotion/vim-easymotion'                                  " https://github.com/easymotion/vim-easymotion
+" Plug 'easymotion/vim-easymotion'                                  " https://github.com/easymotion/vim-easymotion
 map <Leader><Leader> <Plug>(easymotion-prefix)
 map <Leader>j <Plug>(easymotion-prefix)j
 map <Leader>k <Plug>(easymotion-prefix)k
 map <Leader>n <Plug>(easymotion-prefix)n
 map <Leader>N <Plug>(easymotion-prefix)N
 
-Plug 'terryma/vim-expand-region'                                  " https://github.com/terryma/vim-expand-region
+" Plug 'terryma/vim-expand-region'                                  " https://github.com/terryma/vim-expand-region
 Plug 'terryma/vim-multiple-cursors'                               " https://github.com/terryma/vim-multiple-cursors
-Plug 'sirver/UltiSnips'                                           " https://github.com/SirVer/ultisnips
-Plug 'tpope/vim-commentary'                                       " https://github.com/tpope/vim-commentary
+" Plug 'sirver/UltiSnips'                                           " https://github.com/SirVer/ultisnips
+" Plug 'tpope/vim-commentary'                                       " https://github.com/tpope/vim-commentary
 autocmd FileType python,shell set commentstring=#\ %s              
 autocmd FileType mako set cms=##\ %s
 autocmd FileType apache setlocal commentstring=#\ %s
@@ -243,19 +244,19 @@ Plug 'vim-scripts/vim-auto-save'                                  " https://gith
 let g:auto_save = 1  
 
 """ 4.5 Git
-Plug 'airblade/vim-gitgutter'                                     " https://github.com/airblade/vim-gitgutter
-Plug 'Xuyuanp/nerdtree-git-plugin'                                " https://github.com/Xuyuanp/nerdtree-git-plugin
-let g:NERDTreeIndicatorMapCustom = {
-     \ "Modified"  : "✹",
-     \ "Staged"    : "✚",
-     \ "Untracked" : "✭",
-     \ "Renamed"   : "➜",
-    \ "Unmerged"  : "═",
-    \ "Deleted"   : "✖",
-    \ "Dirty"     : "✗",
-    \ "Clean"     : "✔︎",
-    \ "Unknown"   : "?"
-    \ }
+" Plug 'airblade/vim-gitgutter'                                     " https://github.com/airblade/vim-gitgutter
+" Plug 'Xuyuanp/nerdtree-git-plugin'                                " https://github.com/Xuyuanp/nerdtree-git-plugin
+" let g:NERDTreeIndicatorMapCustom = {
+"      \ "Modified"  : "✹",
+"      \ "Staged"    : "✚",
+"      \ "Untracked" : "✭",
+"      \ "Renamed"   : "➜",
+"     \ "Unmerged"  : "═",
+"     \ "Deleted"   : "✖",
+"     \ "Dirty"     : "✗",
+"     \ "Clean"     : "✔︎",
+"     \ "Unknown"   : "?"
+"     \ }
 
 """ 4.6 Highlighting
 Plug 'gregsexton/MatchTag'                                        " https://github.com/gregsexton/MatchTag
@@ -287,55 +288,55 @@ au Syntax * RainbowParenthesesLoadSquare
 au Syntax * RainbowParenthesesLoadBraces
 
 """ 4.7 Linting
-Plug 'w0rp/ale'                                                   " https://github.com/w0rp/ale
-let g:ale_sign_column_always = 0
-let g:ale_set_loclist = 0
-let g:ale_set_highlights = 0
-let b:ale_linters = ['flake8', 'pylint']
-let b:ale_fixers = ['autopep8', 'yapf']
-let b:ale_warn_about_trailing_whitespace = 0
-let g:ale_completion_enabled = 1
-let g:ale_open_list = 0
-let g:ale_keep_list_window_open = 0
-noremap <leader>p :Autoformat<cr>
+" Plug 'w0rp/ale'                                                   " https://github.com/w0rp/ale
+" let g:ale_sign_column_always = 0
+" let g:ale_set_loclist = 0
+" let g:ale_set_highlights = 0
+" let b:ale_linters = ['flake8', 'pylint']
+" let b:ale_fixers = ['autopep8', 'yapf']
+" let b:ale_warn_about_trailing_whitespace = 0
+" let g:ale_completion_enabled = 1
+" let g:ale_open_list = 0
+" let g:ale_keep_list_window_open = 0
+" noremap <leader>p :Autoformat<cr>
 
-highlight clear ALEErrorSign
-highlight clear ALEWarningSign
+" highlight clear ALEErrorSign
+" highlight clear ALEWarningSign
 
 """ 4.8 Markdown
-Plug 'gabrielelana/vim-markdown'                                  " https://github.com/gabrielelana/vim-markdown
-Plug 'joker1007/vim-markdown-quote-syntax'                        " https://github.com/joker1007/vim-markdown-quote-syntax
+" Plug 'gabrielelana/vim-markdown'                                  " https://github.com/gabrielelana/vim-markdown
+" Plug 'joker1007/vim-markdown-quote-syntax'                        " https://github.com/joker1007/vim-markdown-quote-syntax
 
 """ 4.9 Python
-Plug 'vim-scripts/indentpython.vim'                               " https://github.com/vim-scripts/indentpython.vim<Paste>
-Plug 'michaeljsmith/vim-indent-object'                            " https://github.com/michaeljsmith/vim-indent-object
-Plug 'vim-python/python-syntax'                                   " https://github.com/vim-python/python-syntax
+" Plug 'vim-scripts/indentpython.vim'                               " https://github.com/vim-scripts/indentpython.vim<Paste>
+" Plug 'michaeljsmith/vim-indent-object'                            " https://github.com/michaeljsmith/vim-indent-object
+" Plug 'vim-python/python-syntax'                                   " https://github.com/vim-python/python-syntax
 let g:python_highlight_all = 1
 
 """ 4.10 R-language
-Plug 'jalvesaq/Nvim-R'                                            " https://github.com/jalvesaq/Nvim-R
+" Plug 'jalvesaq/Nvim-R'                                            " https://github.com/jalvesaq/Nvim-R
 let g:rout_follow_colorscheme = 1
 let g:Rout_more_colors = 1
 
 """ 4.11 Searching
-Plug 'majutsushi/tagbar'                                           " https://github.com/majutsushi/tagbar
-let g:tagbar_width=30
-nnoremap <Leader>m :TagbarToggle<CR>
+" Plug 'majutsushi/tagbar'                                           " https://github.com/majutsushi/tagbar
+" let g:tagbar_width=30
+" nnoremap <Leader>m :TagbarToggle<CR>
 
-Plug 'haya14busa/incsearch.vim'                                    " https://github.com/haya14busa/incsearch.vim
-map /  <Plug>(incsearch-forward)
-map ?  <Plug>(incsearch-backward)
-map g/ <Plug>(incsearch-stay)
+" Plug 'haya14busa/incsearch.vim'                                    " https://github.com/haya14busa/incsearch.vim
+" map /  <Plug>(incsearch-forward)
+" map ?  <Plug>(incsearch-backward)
+" map g/ <Plug>(incsearch-stay)
 
-let g:incsearch#auto_nohlsearch = 1
-map n  <Plug>(incsearch-nohl-n)
-map N  <Plug>(incsearch-nohl-N)
-map *  <Plug>(incsearch-nohl-*)
-map #  <Plug>(incsearch-nohl-#)
-map g* <Plug>(incsearch-nohl-g*)
-map g# <Plug>(incsearch-nohl-g#)
+" let g:incsearch#auto_nohlsearch = 1
+" map n  <Plug>(incsearch-nohl-n)
+" map N  <Plug>(incsearch-nohl-N)
+" map *  <Plug>(incsearch-nohl-*)
+" map #  <Plug>(incsearch-nohl-#)
+" map g* <Plug>(incsearch-nohl-g*)
+" map g# <Plug>(incsearch-nohl-g#)
 
-Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }            " https://github.com/scrooloose/nerdtree
+" Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }            " https://github.com/scrooloose/nerdtree
 let NERDTreeShowBookmarks=1
 let NERDTreeQuitOnOpen = 1
 let NERDTreeMinimalUI = 1
@@ -343,14 +344,14 @@ let NERDTreeDirArrows = 1
 let g:NERDTreeWinSize = 40
 nnoremap <Leader>n :NERDTreeToggle<Enter>
 
-Plug 'vim-ctrlspace/vim-ctrlspace'                                 " https://github.com/vim-ctrlspace/vim-ctrlspace<Paste>
-if has("gui_running")
-    let g:CtrlSpaceSymbols = { "File": "◯", "CTab": "▣", "Tabs": "▢" }
-endif
+" Plug 'vim-ctrlspace/vim-ctrlspace'                                 " https://github.com/vim-ctrlspace/vim-ctrlspace<Paste>
+" if has("gui_running")
+"     let g:CtrlSpaceSymbols = { "File": "◯", "CTab": "▣", "Tabs": "▢" }
+" endif
 
-if executable("ag")
-    let g:CtrlSpaceGlobCommand = 'ag -l --nocolor -g ""'
-endif
+" if executable("ag")
+"     let g:CtrlSpaceGlobCommand = 'ag -l --nocolor -g ""'
+" endif
 
 nnoremap <silent><C-p> :CtrlSpace O<CR>
 
@@ -359,7 +360,7 @@ Plug 'yuttie/comfortable-motion.vim'                               " https://git
 let g:comfortable_motion_scroll_down_key = "j"
 let g:comfortable_motion_scroll_up_key = "k"
 
-Plug 'kassio/neoterm'                                              " https://github.com/kassio/neoterm
-Plug 'godlygeek/tabular'                                           " https://github.com/godlygeek/tabular
+" Plug 'kassio/neoterm'                                              " https://github.com/kassio/neoterm
+" Plug 'godlygeek/tabular'                                           " https://github.com/godlygeek/tabular
 
 call plug#end()

@@ -6,15 +6,17 @@ set wildchar=<TAB>                    " Start wild expansion in the command line
 set history=50                        " Keep 50 lines of command line history
 set nobackup                          " No *~ backup files
 set signcolumn=yes                    " always show signcolumn
+
 set list
-set listchars=eol:↵,tab:>-,trail:~,extends:>,precedes:<
+set listchars=eol:↵,tab:>-,trail:-,extends:>,precedes:<
+
 set nowritebackup                     " Do not make a backup before overwriting a file
 set cmdheight=2                       " Better display for messages
 set colorcolumn=80
+set t_Co=256
 set nowrapscan                        " Do not searche wrap around the end of the file
 set noswapfile                        " Do not use a swapfile for the buffer
 set background=dark                   " Dark background
-set t_Co=256                          " 256 color mode
 set termguicolors                     " Use true color in the terminal
 colorscheme one                       " Colorschemes
 set shortmess+=c                      " don't give iins-completion-menu messages.
@@ -61,14 +63,17 @@ set noerrorbells                      " No annoying sound on errors
 set novisualbell                      " No visual bell
 set t_vb=                             " No beep or flash
 
+
+
 " -----------------------------------------------------------------------------
+" autocmd TextChanged,TextChangedI <buffer> silent write
+
 autocmd FileType ruby setlocal expandtab shiftwidth=2 tabstop=2
 autocmd FileType go setlocal expandtab shiftwidth=4 tabstop=4
 autocmd Filetype html setlocal tabstop=2 softtabstop=2 shiftwidth=2
 autocmd Filetype javascript setlocal tabstop=4 sts=4 sw=4
 autocmd FileType yaml setlocal tabstop=2 softtabstop=2 shiftwidth=2 expandtab
 autocmd Filetype sh setlocal tabstop=2 softtabstop=2 shiftwidth=2
-
 " -----------------------------------------------------------------------------
 "" Keybinding
 let mapleader = ","
@@ -76,9 +81,9 @@ let mapleader = ","
 "" Plugins
 call plug#begin('~/.vim/plugged')
 
-"Plug 'Yggdroot/indentLine'
-"let g:IndentLinesEnable = 1
-"let g:indentLine_leadingSpaceEnabled = 1
+Plug 'Yggdroot/indentLine'
+let g:IndentLinesEnable = 1
+let g:indentLine_leadingSpaceEnabled = 1
 
 Plug 'vim-scripts/vim-auto-save'
 let g:auto_save = 1
@@ -88,25 +93,28 @@ map <C-n> :NERDTreeToggle<CR>
 let NERDTreeShowLineNumbers=1
 let NERDTreeAutoCenter=1
 
-" Plug 'Chiel92/vim-autoformat'
+"Plug 'Chiel92/vim-autoformat'
 
 " Plug 'michaeljsmith/vim-indent-object'
-" Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-surround'
+Plug 'tpope/vim-fugitive'
+" Plug 'tpope/vim-surround'
 Plug 'airblade/vim-gitgutter'
 " Plug 'kien/ctrlp.vim'
-"let g:ctrlp_map = '<c-p>'
-"let g:ctrlp_cmd = 'CtrlP'
+" let g:ctrlp_map = '<c-p>'
+" let g:ctrlp_cmd = 'CtrlP'
 
-Plug 'groenewege/vim-less'
+" Plug 'groenewege/vim-less'
 " Plug 'godlygeek/tabular'
 " Plug 'plasticboy/vim-markdown'
-Plug 'vim-syntastic/syntastic'
-Plug 'mhinz/vim-startify'
-Plug 'Vimjas/vim-python-pep8-indent'
+" Plug 'vim-syntastic/syntastic'
+" let g:syntastic_python_checkers = ['pylint']
+
+" Plug 'mhinz/vim-startify'
+" Plug 'Vimjas/vim-python-pep8-indent'
 " Plug 'pangloss/vim-javascript'
 " Plug 'mxw/vim-jsx'
-Plug 'vim-scripts/nginx.vim'
+" Plug 'vim-scripts/nginx.vim'
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'itchyny/lightline.vim'
 let g:lightline = {'colorscheme': 'one'}
 
@@ -118,9 +126,9 @@ else
   Plug 'roxma/vim-hug-neovim-rpc'
 endif
 let g:deoplete#enable_at_startup = 1
-"let g:python3_host_prog = '/home/bagel/.pyenv/shims/python3'
+" let g:python3_host_prog = '/home/bagel/.pyenv/shims/python3'
 
-Plug 'vim-airline/vim-airline-themes'
-let g:airline_theme='deus'
-
+" Plug 'vim-airline/vim-airline-themes'
+" let g:airline_theme='deus'
 call plug#end()
+

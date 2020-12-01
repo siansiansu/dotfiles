@@ -81,12 +81,9 @@ let mapleader = ","
 "" Plugins
 call plug#begin('~/.vim/plugged')
 
-Plug 'Yggdroot/indentLine'
-let g:IndentLinesEnable = 1
-let g:indentLine_leadingSpaceEnabled = 1
-
-Plug 'vim-scripts/vim-auto-save'
-let g:auto_save = 1
+"Plug 'Yggdroot/indentLine'
+"let g:IndentLinesEnable = 1
+"let g:indentLine_leadingSpaceEnabled = 1
 
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 map <C-n> :NERDTreeToggle<CR>
@@ -96,7 +93,7 @@ let NERDTreeAutoCenter=1
 "Plug 'Chiel92/vim-autoformat'
 
 " Plug 'michaeljsmith/vim-indent-object'
-Plug 'tpope/vim-fugitive'
+"Plug 'tpope/vim-fugitive'
 " Plug 'tpope/vim-surround'
 Plug 'airblade/vim-gitgutter'
 " Plug 'kien/ctrlp.vim'
@@ -126,7 +123,8 @@ else
   Plug 'roxma/vim-hug-neovim-rpc'
 endif
 let g:deoplete#enable_at_startup = 1
-" let g:python3_host_prog = '/home/bagel/.pyenv/shims/python3'
+let g:python_host_prog = '/Users/alexsu/.pyenv/shims/python'
+let g:python3_host_prog = '/Users/alexsu/.pyenv/shims/python3'
 
 " Plug 'vim-airline/vim-airline-themes'
 " let g:airline_theme='deus'

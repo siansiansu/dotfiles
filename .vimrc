@@ -113,7 +113,7 @@ Plug 'airblade/vim-gitgutter'
 " Plug 'vim-scripts/nginx.vim'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'itchyny/lightline.vim'
-let g:lightline = {'colorscheme': 'one'}
+let g:lightline = {'colorscheme': 'default'}
 
 if has('nvim')
   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }

@@ -23,6 +23,7 @@ alias rm="rm -iv"
 alias countryroad="cd ~/"
 alias sed="gsed"
 alias vim="nvim"
+alias back="git reset --hard HEAD~1"
 
 # Alias for docker
 alias dat='docker attach'

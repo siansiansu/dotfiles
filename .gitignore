@@ -1,4 +1,12 @@
-# MacOS
-*/.DS_Store
-
-.DS_Store
+*
+!.zshrc
+!.vimrc
+!.tmux.conf
+!.vim/autoload
+!.vim/colors
+!.config/nvim
+!README.md
+!LICENSE
+!.inputrc
+!.gitignore_global
+!.bash_profile

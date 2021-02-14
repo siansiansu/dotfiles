@@ -1,3 +1,3 @@
 # dotfiles
 
-![GitHub](https://img.shields.io/github/license/mashape/apistatus.svg) 
+Add my personal setting with git version control.

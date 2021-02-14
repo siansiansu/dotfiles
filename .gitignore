@@ -1,12 +1,13 @@
 *
 !.zshrc
+!.gitignore
 !.vimrc
 !.tmux.conf
 !.vim/autoload
 !.vim/colors
+!.vim/plugged
 !.config/nvim
 !README.md
 !LICENSE
-!.inputrc
 !.gitignore_global
 !.bash_profile

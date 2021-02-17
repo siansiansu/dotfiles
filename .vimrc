@@ -18,7 +18,7 @@ set nowrapscan                        " Do not searche wrap around the end of th
 set noswapfile                        " Do not use a swapfile for the buffer
 set background=dark                   " Dark background
 set termguicolors                     " Use true color in the terminal
-colorscheme default                       " Colorschemes
+colorscheme solarized                 " Colorschemes
 set shortmess+=c                      " don't give iins-completion-menu messages.
 set backspace=eol,start,indent        " Controlling What the Backspace Key Does
 set timeoutlen=500                    " The time in milliseconds that is waited for a key code 
@@ -34,7 +34,6 @@ set autoread                          " Auto read when file is changed from outs
 filetype on                           " Enable filetype detection
 filetype indent on                    " Enable filetype-specific indenting
 filetype plugin on                    " Enable filetype-specific plugins
-set cursorline                        " Highlight the screen line of the cursor
 set showmatch                         " Cursor shows matching ) and }
 syntax on                             " Syntax highlight
 set ruler                             " Shows line number and column
@@ -62,6 +61,9 @@ set smarttab                          " Insert tabs on the start of a line accor
 set noerrorbells                      " No annoying sound on errors
 set novisualbell                      " No visual bell
 set t_vb=                             " No beep or flash
+set cursorline                        " Highlight the screen line of the cursor
+hi clear CursorLine
+hi CursorLine gui=underline cterm=underline ctermfg=None guifg=None
 
 
 

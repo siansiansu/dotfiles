@@ -18,7 +18,7 @@ set nowrapscan                        " Do not searche wrap around the end of th
 set noswapfile                        " Do not use a swapfile for the buffer
 set background=dark                   " Dark background
 set termguicolors                     " Use true color in the terminal
-colorscheme one                 " Colorschemes
+colorscheme solarized                 " Colorschemes
 set shortmess+=c                      " don't give iins-completion-menu messages.
 set backspace=eol,start,indent        " Controlling What the Backspace Key Does
 set timeoutlen=500                    " The time in milliseconds that is waited for a key code 

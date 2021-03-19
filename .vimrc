@@ -115,7 +115,13 @@ Plug 'airblade/vim-gitgutter'
 " Plug 'vim-scripts/nginx.vim'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'itchyny/lightline.vim'
-let g:lightline = {'colorscheme': 'one'}
+let g:lightline = {'colorscheme': 'solarized'}
+
+set pyxversion=3
+set encoding=utf-8
+let g:deoplete#enable_at_startup = 1
+let g:python_host_prog = '/Users/alexsu/.pyenv/shims/python'
+let g:python3_host_prog = '/Users/alexsu/.pyenv/shims/python3'
 
 if has('nvim')
   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
@@ -124,9 +130,6 @@ else
   Plug 'roxma/nvim-yarp'
   Plug 'roxma/vim-hug-neovim-rpc'
 endif
-let g:deoplete#enable_at_startup = 1
-let g:python_host_prog = '/Users/alexsu/.pyenv/shims/python'
-let g:python3_host_prog = '/Users/alexsu/.pyenv/shims/python3'
 
 " Plug 'vim-airline/vim-airline-themes'
 " let g:airline_theme='deus'

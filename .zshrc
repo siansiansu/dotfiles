@@ -1,5 +1,6 @@
 export ZSH="/Users/alexsu/.oh-my-zsh"
 ZSH_THEME="powerlevel9k/powerlevel9k"
+
 export TERM="xterm-256color"
 
 plugins=(git docker)
@@ -58,6 +59,8 @@ alias dwait='docker wait'
 alias killnoneimage="docker rmi -f \$(docker images -f dangling=true -aq)"
 alias killnoneps="docker rm -f \$(docker ps -aq)"
 alias dc="docker-compose"
+
+alias tmux="TERM=screen-256color-bce tmux"
 
 # Setup Nvm
 export NVM_DIR="$HOME/.nvm"

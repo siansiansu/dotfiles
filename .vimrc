@@ -63,9 +63,9 @@ set novisualbell                      " No visual bell
 set t_vb=                             " No beep or flash
 set cursorline                        " Highlight the screen line of the cursor
 hi clear CursorLine
+hi clear CursorColumn
 hi CursorLine gui=underline cterm=underline ctermfg=None guifg=None
-
-
+hi ColorColumn guifg=DarkGrey guibg=DarkCyan ctermbg=magenta
 
 " -----------------------------------------------------------------------------
 " autocmd TextChanged,TextChangedI <buffer> silent write

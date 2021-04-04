@@ -6,11 +6,8 @@ set wildchar=<TAB>                    " Start wild expansion in the command line
 set history=50                        " Keep 50 lines of command line history
 set nobackup                          " No *~ backup files
 set signcolumn=yes                    " always show signcolumn
-
 set list
 set listchars=eol:↵,tab:>-,trail:-,extends:>,precedes:<
-" set listchars=tab:»\ ,extends:›,precedes:‹,nbsp:·,trail:·
-
 set nowritebackup                     " Do not make a backup before overwriting a file
 set cmdheight=2                       " Better display for messages
 set colorcolumn=80
@@ -64,9 +61,7 @@ set novisualbell                      " No visual bell
 set t_vb=                             " No beep or flash
 set cursorline                        " Highlight the screen line of the cursor
 hi clear CursorLine
-hi clear CursorColumn
-" hi CursorLine gui=underline cterm=underline ctermfg=None guifg=None
-" hi ColorColumn guifg=DarkGrey guibg=DarkCyan ctermbg=magenta
+hi CursorLine gui=underline cterm=underline ctermfg=None guifg=None
 
 " -----------------------------------------------------------------------------
 " autocmd TextChanged,TextChangedI <buffer> silent write
@@ -97,20 +92,19 @@ let NERDTreeAutoCenter=1
 
 " Plug 'michaeljsmith/vim-indent-object'
 "Plug 'tpope/vim-fugitive'
-" Plug 'tpope/vim-surround'
+Plug 'tpope/vim-surround'
 Plug 'airblade/vim-gitgutter'
 " Plug 'kien/ctrlp.vim'
 " let g:ctrlp_map = '<c-p>'
 " let g:ctrlp_cmd = 'CtrlP'
 
 " Plug 'groenewege/vim-less'
-" Plug 'godlygeek/tabular'
-" Plug 'plasticboy/vim-markdown'
+Plug 'godlygeek/tabular'
+Plug 'plasticboy/vim-markdown'
 " Plug 'vim-syntastic/syntastic'
 " let g:syntastic_python_checkers = ['pylint']
 
 " Plug 'mhinz/vim-startify'
-Plug 'jiangmiao/auto-pairs'
 " Plug 'Vimjas/vim-python-pep8-indent'
 " Plug 'pangloss/vim-javascript'
 " Plug 'mxw/vim-jsx'
@@ -120,7 +114,6 @@ Plug 'itchyny/lightline.vim'
 let g:lightline = {'colorscheme': 'one'}
 
 set pyxversion=3
-set encoding=utf-8
 let g:deoplete#enable_at_startup = 1
 let g:python_host_prog = '/Users/alexsu/.pyenv/shims/python'
 let g:python3_host_prog = '/Users/alexsu/.pyenv/shims/python3'
@@ -135,5 +128,5 @@ endif
 
 " Plug 'vim-airline/vim-airline-themes'
 " let g:airline_theme='deus'
-call plug#end()
 
+call plug#end()

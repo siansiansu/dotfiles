@@ -9,6 +9,7 @@ set signcolumn=yes                    " always show signcolumn
 
 set list
 set listchars=eol:↵,tab:>-,trail:-,extends:>,precedes:<
+" set listchars=tab:»\ ,extends:›,precedes:‹,nbsp:·,trail:·
 
 set nowritebackup                     " Do not make a backup before overwriting a file
 set cmdheight=2                       " Better display for messages
@@ -18,7 +19,7 @@ set nowrapscan                        " Do not searche wrap around the end of th
 set noswapfile                        " Do not use a swapfile for the buffer
 set background=dark                   " Dark background
 set termguicolors                     " Use true color in the terminal
-colorscheme solarized                 " Colorschemes
+colorscheme one                 " Colorschemes
 set shortmess+=c                      " don't give iins-completion-menu messages.
 set backspace=eol,start,indent        " Controlling What the Backspace Key Does
 set timeoutlen=500                    " The time in milliseconds that is waited for a key code 
@@ -64,8 +65,8 @@ set t_vb=                             " No beep or flash
 set cursorline                        " Highlight the screen line of the cursor
 hi clear CursorLine
 hi clear CursorColumn
-hi CursorLine gui=underline cterm=underline ctermfg=None guifg=None
-hi ColorColumn guifg=DarkGrey guibg=DarkCyan ctermbg=magenta
+" hi CursorLine gui=underline cterm=underline ctermfg=None guifg=None
+" hi ColorColumn guifg=DarkGrey guibg=DarkCyan ctermbg=magenta
 
 " -----------------------------------------------------------------------------
 " autocmd TextChanged,TextChangedI <buffer> silent write
@@ -109,13 +110,14 @@ Plug 'airblade/vim-gitgutter'
 " let g:syntastic_python_checkers = ['pylint']
 
 " Plug 'mhinz/vim-startify'
+Plug 'jiangmiao/auto-pairs'
 " Plug 'Vimjas/vim-python-pep8-indent'
 " Plug 'pangloss/vim-javascript'
 " Plug 'mxw/vim-jsx'
 " Plug 'vim-scripts/nginx.vim'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'itchyny/lightline.vim'
-let g:lightline = {'colorscheme': 'solarized'}
+let g:lightline = {'colorscheme': 'one'}
 
 set pyxversion=3
 set encoding=utf-8

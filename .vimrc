@@ -100,7 +100,12 @@ Plug 'airblade/vim-gitgutter'
 
 " Plug 'groenewege/vim-less'
 Plug 'godlygeek/tabular'
-Plug 'plasticboy/vim-markdown'
+" Plug 'plasticboy/vim-markdown'
+" let g:vim_markdown_folding_disabled = 1
+" Plug 'JamshedVesuna/vim-markdown-preview'
+" let vim_markdown_preview_github=1
+" let vim_markdown_preview_hotkey='<C-m>'
+
 " Plug 'vim-syntastic/syntastic'
 " let g:syntastic_python_checkers = ['pylint']
 

@@ -76,6 +76,13 @@ autocmd Filetype sh setlocal tabstop=2 softtabstop=2 shiftwidth=2
 "" Keybinding
 let mapleader = ","
 " -----------------------------------------------------------------------------
+"
+highlight LineHighlight ctermbg=gray guibg=gray
+nnoremap <silent> <Leader>f :call matchadd('LineHighlight', '\%'.line('.').'l')<CR>
+nnoremap <silent> <Leader>c :call clearmatches()<CR>
+
+" -----------------------------------------------------------------------------
+
 "" Plugins
 call plug#begin('~/.vim/plugged')
 

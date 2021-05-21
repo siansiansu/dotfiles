@@ -76,13 +76,6 @@ autocmd Filetype sh setlocal tabstop=2 softtabstop=2 shiftwidth=2
 "" Keybinding
 let mapleader = ","
 " -----------------------------------------------------------------------------
-"
-highlight LineHighlight ctermbg=gray guibg=gray
-nnoremap <silent> <Leader>f :call matchadd('LineHighlight', '\%'.line('.').'l')<CR>
-nnoremap <silent> <Leader>c :call clearmatches()<CR>
-
-" -----------------------------------------------------------------------------
-
 "" Plugins
 call plug#begin('~/.vim/plugged')
 
@@ -90,10 +83,10 @@ call plug#begin('~/.vim/plugged')
 "let g:IndentLinesEnable = 1
 "let g:indentLine_leadingSpaceEnabled = 1
 
-Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
-map <C-n> :NERDTreeToggle<CR>
-let NERDTreeShowLineNumbers=1
-let NERDTreeAutoCenter=1
+" Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+" map <C-n> :NERDTreeToggle<CR>
+" let NERDTreeShowLineNumbers=1
+" let NERDTreeAutoCenter=1
 
 "Plug 'Chiel92/vim-autoformat'
 
@@ -101,7 +94,8 @@ let NERDTreeAutoCenter=1
 "Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'airblade/vim-gitgutter'
-" Plug 'kien/ctrlp.vim'
+Plug 'mileszs/ack.vim'
+" Plug 'ctrlpvim/ctrlp.vim'
 " let g:ctrlp_map = '<c-p>'
 " let g:ctrlp_cmd = 'CtrlP'
 
@@ -127,6 +121,7 @@ let g:lightline = {'colorscheme': 'one'}
 
 set pyxversion=3
 let g:deoplete#enable_at_startup = 1
+let g:omni_sql_no_default_maps = 1
 let g:python_host_prog = '/Users/alexsu/.pyenv/shims/python'
 let g:python3_host_prog = '/Users/alexsu/.pyenv/shims/python3'
 
@@ -140,5 +135,9 @@ endif
 
 " Plug 'vim-airline/vim-airline-themes'
 " let g:airline_theme='deus'
+
+Plug 'hashivim/vim-terraform'
+let g:terraform_align=1
+let g:terraform_fmt_on_save=1
 
 call plug#end()

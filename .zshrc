@@ -1,11 +1,18 @@
 export ZSH="/Users/alexsu/.oh-my-zsh"
-ZSH_THEME="powerlevel9k/powerlevel9k"
+# ZSH_THEME="powerlevel9k/powerlevel9k"
+# ZSH_THEME="agnoster"
+ZSH_THEME="robbyrussell"
 
 export TERM="xterm-256color"
 
-plugins=(git docker)
+plugins=(git docker gcloud)
 
 source $ZSH/oh-my-zsh.sh
+
+export PATH="/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/bin:$PATH"
+if [ -f '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc' ]; then
+    . '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc';
+fi
 
 # Setup Pyenv
 export PYENV_ROOT="$HOME/.pyenv"
@@ -62,19 +69,11 @@ alias dc="docker-compose"
 
 alias tmux="TERM=screen-256color-bce tmux"
 
+alias cat="bat"
+
 # Setup Nvm
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-# Setup Java Home
-export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
-
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/alexsu/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/alexsu/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/alexsu/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/alexsu/google-cloud-sdk/completion.zsh.inc'; fi
-
 
 export GO111MODULE="auto"

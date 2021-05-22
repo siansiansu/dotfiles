@@ -17,9 +17,9 @@ brew install git zsh tmux
 
 ## Installation
 
-Clone the repo in your home dir (e.g., `/home/alexsu`)
+Clone this repo into your home dir without project folder.
 ```bash
-git clone git@github.com:siansiansu/dotfiles.git .
+git clone git@github.com:siansiansu/dotfiles.git $HOME
 ```
 
 ## Contributing

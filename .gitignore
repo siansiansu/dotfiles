@@ -3,12 +3,14 @@
 !.gitignore
 !.vimrc
 !.tmux.conf
-!.vim/autoload
-!.vim/colors
-!.vim/plugged
+!.vim
 !.config/nvim
 !README.md
 !LICENSE
 !.gitignore_global
 !.bash_profile
 !setup.sh
+
+#folders
+!tools/
+!.vim/

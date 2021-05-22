@@ -19,7 +19,7 @@ brew install git zsh tmux
 
 Clone the repo in your home dir (e.g., `/home/alexsu`)
 ```bash
-git clone git@github.com:siansiansu/dotfiles.git
+git clone git@github.com:siansiansu/dotfiles.git .
 ```
 
 ## Contributing

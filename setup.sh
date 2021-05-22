@@ -6,8 +6,9 @@ RD='\033[0;32m'
 NC='\033[0;0m'
 
 BREW1=( git zsh tmux vim neovim )
-BREW2=( k9s most bat shellcheck tflint tfenv yamllint nvm )
-CASK=( spotify spectacle kap )
+BREW2=( aws-cdk k9s most bat shellcheck tflint tfenv yamllint nvm )
+CASK=( libreoffice iterm2 postman keka brave-browser firefox virtualbox pritunl \
+       spotify spectacle kap google-cloud-sdk slack bitwarden docker )
 
 homebrew()
 {

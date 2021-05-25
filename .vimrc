@@ -57,6 +57,8 @@ set tabpagemax=100                    " Maximum number of tab pages
 set hidden                            " Buffer becomes hidden when it is |abandon|ed 
 set smarttab                          " Insert tabs on the start of a line according to context
 set noerrorbells                      " No annoying sound on errors
+set virtualedit=block
+
 set novisualbell                      " No visual bell
 set t_vb=                             " No beep or flash
 set cursorline                        " Highlight the screen line of the cursor

@@ -69,8 +69,6 @@ alias dc="docker-compose"
 
 alias tmux="TERM=screen-256color-bce tmux"
 
-alias cat="bat"
-
 # Setup Nvm
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm

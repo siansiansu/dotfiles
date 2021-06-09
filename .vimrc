@@ -121,19 +121,19 @@ Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'itchyny/lightline.vim'
 let g:lightline = {'colorscheme': 'one'}
 
-set pyxversion=3
-let g:deoplete#enable_at_startup = 1
-let g:omni_sql_no_default_maps = 1
+"set pyxversion=3
+"let g:deoplete#enable_at_startup = 1
+"let g:omni_sql_no_default_maps = 1
 let g:python_host_prog = '/Users/alexsu/.pyenv/shims/python'
 let g:python3_host_prog = '/Users/alexsu/.pyenv/shims/python3'
-
-if has('nvim')
-  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-else
-  Plug 'Shougo/deoplete.nvim'
-  Plug 'roxma/nvim-yarp'
-  Plug 'roxma/vim-hug-neovim-rpc'
-endif
+"
+"if has('nvim')
+"  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+"else
+"  Plug 'Shougo/deoplete.nvim'
+"  Plug 'roxma/nvim-yarp'
+"  Plug 'roxma/vim-hug-neovim-rpc'
+"endif
 
 " Plug 'vim-airline/vim-airline-themes'
 " let g:airline_theme='deus'
@@ -141,5 +141,9 @@ endif
 Plug 'hashivim/vim-terraform'
 let g:terraform_align=1
 let g:terraform_fmt_on_save=1
+
+Plug 'junegunn/fzf.vim'
+Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 call plug#end()

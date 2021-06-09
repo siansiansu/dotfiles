@@ -31,7 +31,7 @@ alias rm="rm -iv"
 alias countryroad="cd ~/"
 alias sed="gsed"
 alias vim="nvim"
-alias back="git reset --hard HEAD~1"
+alias back="git reset --soft HEAD~1"
 
 # Alias for docker
 alias dat='docker attach'
@@ -68,6 +68,9 @@ alias killnoneps="docker rm -f \$(docker ps -aq)"
 alias dc="docker-compose"
 
 alias tmux="TERM=screen-256color-bce tmux"
+alias tf="terraform"
+alias tfplanout="terraform plan -no-color > output.txt"
+alias gbc="git branch | cat"
 
 # Setup Nvm
 export NVM_DIR="$HOME/.nvm"

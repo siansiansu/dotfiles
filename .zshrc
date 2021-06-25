@@ -79,6 +79,10 @@ alias tf="terraform"
 alias tfplanout="terraform plan -no-color > output.txt"
 alias gbc="git branch | cat"
 
+alias tfapply_auto="terraform apply -auto-approve"
+alias tfapply="terraform apply"
+
+
 alias k=kubectl
 complete -F __start_kubectl k
 

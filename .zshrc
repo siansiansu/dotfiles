@@ -7,7 +7,7 @@ fi
 
 export ZSH="/Users/alexsu/.oh-my-zsh"
 
-#ZSH_THEME="robbyrussell"
+ZSH_THEME="robbyrussell"
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
 export TERM="xterm-256color"
@@ -81,6 +81,7 @@ alias gbc="git branch | cat"
 
 alias tfapply_auto="terraform apply -auto-approve"
 alias tfapply="terraform apply"
+alias ls="lsd"
 
 
 alias k=kubectl

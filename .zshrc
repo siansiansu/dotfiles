@@ -15,7 +15,8 @@ export TERM="xterm-256color"
 plugins=(git docker gcloud)
 
 source $ZSH/oh-my-zsh.sh
-
+export GOPATH=$HOME/go
+export PATH=$PATH:$HOME/go/bin
 export PATH="/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/bin:$PATH"
 if [ -f '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc' ]; then
     . '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc';
@@ -106,3 +107,5 @@ export PAGER="less"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+source ~/media17.config

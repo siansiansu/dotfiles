@@ -85,10 +85,10 @@ call plug#begin('~/.vim/plugged')
 "let g:IndentLinesEnable = 1
 "let g:indentLine_leadingSpaceEnabled = 1
 
-" Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
-" map <C-n> :NERDTreeToggle<CR>
-" let NERDTreeShowLineNumbers=1
-" let NERDTreeAutoCenter=1
+Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+map <C-n> :NERDTreeToggle<CR>
+let NERDTreeShowLineNumbers=1
+let NERDTreeAutoCenter=1
 
 "Plug 'Chiel92/vim-autoformat'
 

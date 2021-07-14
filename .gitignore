@@ -10,7 +10,8 @@
 !.gitignore_global
 !.bash_profile
 !setup.sh
+!pre-setup.sh
+!brew-install.sh
 
 #folders
-!tools/
 !.vim/
